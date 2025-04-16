@@ -1,0 +1,13 @@
+[Unit]
+Description=NTP Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/main.py
+Restart=on-failure
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
